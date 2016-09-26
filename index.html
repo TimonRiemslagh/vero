@@ -22,11 +22,27 @@
 </head>
 <body ng-app="myApp" class="tk-ingra">
 
-    <div id="main" ng-controller="MainController">
+    <div class="c-main" ng-controller="MainController">
 
         <div ng-view></div>
 
     </div>
+
+    <footer class="c-footer">
+        <div class="container">
+
+            <ul class="c-footer-list">
+                <li>Veronique Cauchie</li>
+                <li>Tel: 09 253 28 17</li>
+                <li>Gsm: +32 472 43 47 73</li>
+                <li>veronique.cauchie@skynet.be</li>
+                <li>Kleine Koestraat 22, 9940 Evergem</li>
+                <li>Btw: BE 0892.256.478</li>
+                <li>Rekening nummer: 001-5335380-68</li>
+            </ul>
+
+        </div>
+    </footer>
 
     <!-- Libraries -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -47,8 +63,6 @@
     <script src="bower_components/angular-touch/angular-touch.min.js"></script>
     <script src="js/ui-bootstrap.min.js"></script>
     <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
-
-
 
     <script src="app/app.module.js"></script>
     <script src="app/app.route.js"></script>

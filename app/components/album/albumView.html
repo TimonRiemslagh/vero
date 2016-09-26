@@ -1,11 +1,13 @@
 
-<div class="container">
-  <h1 class="c-page-title">{{title}}</h1>
-</div>
+<div class="c-albums">
+  <div class="container">
+    <h1 class="c-page-title">{{title}}</h1>
+  </div>
 
-<div masonry>
-  <div class="masonry-brick" ng-repeat="photo in photos">
-    <img ng-click="openLightboxModal($index)" class="c-photo" ng-src="{{ photo.url }}">
+  <div masonry>
+    <div class="masonry-brick" ng-repeat="photo in photos">
+      <img ng-click="openLightboxModal($index)" class="c-photo" ng-src="{{ photo.url }}">
+    </div>
   </div>
 </div>
 

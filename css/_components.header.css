@@ -40,4 +40,23 @@
     margin-bottom: 30px;
 }
 
+.c-footer {
+    background-color: rgb(10, 117, 170);
+    color: white;
+    padding: 20px 0;
+}
+
+.c-footer-list {
+    margin:0;
+    padding: 0;
+    list-style: none;
+}
+
+.c-footer-list li {
+    margin: 5px 0;
+}
+
+.c-main {
+    min-height: 700px;
+}
 
