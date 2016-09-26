@@ -1,0 +1,36 @@
+
+<div class="container">
+  <h1 class="c-page-title">{{title}}</h1>
+</div>
+
+<div masonry>
+  <div class="masonry-brick" ng-repeat="photo in photos">
+    <img ng-click="openLightboxModal($index)" class="c-photo" ng-src="{{ photo.url }}">
+  </div>
+</div>
+
+  <!--<div class="o-container">
+    <h1 ng-click="test()">{{title}}</h1>
+
+    <div deckgrid class="deckgrid" source="photos">
+      <a href="" ng-click="openLightboxModal($index)">
+        <div class="a-card">
+          <img ng-src="{{card.photo}}">
+        </div>
+      </a>
+    </div>
+
+  </div>-->
+
+
+
+  <!--<div ng-repeat="subset in photosSubSets" class="o-container">
+      <div class="o-grid o-grid--gutter">
+          <div ng-repeat="photo in subset" class="o-grid__item u-1-of-5-bp3">
+            <div class="c-photo" ng-click="showAlbum(album.title)">
+                <img ng-src="{{photo.photo}}">
+            </div>
+          </div>
+      </div>
+  </div>
+</div>-->
