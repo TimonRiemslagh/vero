@@ -83,12 +83,14 @@
   list-style: none;
 }*/
 
-.c-slider__slides {
-  height: 600px;
+.sliderWrapper {
 }
 
+.c-slider__slides {
+   height: 200px;
+ }
+
 .c-slider {
-  height: 600px;
   overflow: hidden;
 }
 
@@ -103,4 +105,9 @@
 .carousel-control {
   color: white;
   width: 10%;
+}
+
+html, body
+{
+  height: 100%;
 }

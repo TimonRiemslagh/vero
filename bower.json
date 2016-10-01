@@ -8,6 +8,7 @@
     "angular-bootstrap-lightbox": "^0.12.0",
     "angular-masonry": "^0.16.0",
     "angular-route": "^1.5.8",
-    "bootstrap": "^3.3.7"
+    "bootstrap": "^3.3.7",
+    "magnific-popup": "^1.1.0"
   }
 }

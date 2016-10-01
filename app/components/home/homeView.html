@@ -1,4 +1,54 @@
+
+
 <div class="c-header">
+
+  <div class="o-headeroverlay c-header__title">
+    <span>Veronique Cauchie</span>
+  </div>
+
+  <div class="c-slider">
+    <div uib-carousel class="c-slider__slides" active="active" interval="myInterval" no-wrap="noWrapSlides">
+      <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <img class="c-photo c-photo--slider" ng-src="{{slide.image}}">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-6">
+
+      <div class="c-header__event">
+        <h1>Vero</h1>
+        <img class="c-photo c-photo-homepage" ng-src="./img/veronique-small.jpg">
+        <p>Voornamelijk maak ik gebruiksvriendelijk serviesgoed, gebakken tussen 1200 en 1240 °C. Door de hoge baktemperatuur mag de keramiek in de vaatwas, microgolf en oven. Daarnaast werk ik ook graag met porselein die ik op verschillende manieren decoreer. Mijn inspiratie komt meestal van de verre reizen die ik samen met mijn gezin doorbreng. Voor mijn beeldjes gebruik ik verschillende texturen waardoor de klei mooi kan ingekleurd worden met oxydes en glazuren. Ook werk ik graag op bestelling waardoor de keramiek gepersonaliseerd kan worden met bv naam of logo. In mijn atelier zijn jullie steeds welkom om mijn nieuwe creaties te komen bekijken.</p>
+      </div>
+
+    </div>
+    <div class="col-md-6">
+
+      <div ng-if="upcomming" class="c-header__event">
+        <h1>Event</h1>
+        <img class="c-photo c-photo--event" ng-src="{{upcomming.url}}">
+        <h3>{{upcomming.desc.Date}}</h3>
+        <p>{{upcomming.desc.description}}</p>
+      </div>
+
+    </div>
+  </div>
+
+
+
+</div>
+
+
+
+
+
+
+<!--<div class="c-header">
   <div class="o-headeroverlay c-header__title">
       <span>Veronique Cauchie</span>
   </div>
@@ -18,29 +68,46 @@
     <h3>{{upcomming.desc.Date}}</h3>
     <p>{{upcomming.desc.description}}</p>
   </div>
-</div>
+</div>-->
 
-<div class="c-albums">
+<div class="container">
 
-  <div class="container">
-    <h1>Foto's</h1>
-  </div>
+  <div class="c-albums">
 
-  <div class="container c-albums">
-    <div ng-repeat="subset in albumSubSets" class="row">
-      <div ng-repeat="album in subset" class="col-md-3">
-        <div class="c-album" ng-click="showAlbum(album.title)">
-          <div class="c-album__image">
-            <img class="c-photo" ng-src="{{album.photos[0].url}}">
-          </div>
+      <h1>Foto's</h1>
 
-          <h3>{{album.summary.title}}</h3>
 
-          <p>{{album.summary.description}}</p>
+    <div masonry class="albumsWrappar">
 
+      <div class="masonry-brick c-album" ng-repeat="album in albums" ng-click="showAlbum(album.title)">
+        <div class="c-album__image">
+          <img class="c-photo" ng-src="{{album.photos[0].url}}">
         </div>
 
+        <h3>{{album.summary.title}}</h3>
+
+        <p>{{album.summary.description}}</p>
+
       </div>
+
     </div>
+
+    <!--<div class="container c-albums">
+      <div ng-repeat="subset in albumSubSets" class="row">
+        <div ng-repeat="album in subset" class="col-md-3">
+          <div class="c-album" ng-click="showAlbum(album.title)">
+            <div class="c-album__image">
+              <img class="c-photo" ng-src="{{album.photos[0].url}}">
+            </div>
+
+            <h3>{{album.summary.title}}</h3>
+
+            <p>{{album.summary.description}}</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>-->
   </div>
 </div>

@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <title>website vero</title>
 
-    <!-- Font -->
-    <script src="https://use.typekit.net/mst7qzy.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
     <!-- Stylesheets -->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.css">
@@ -17,10 +13,16 @@
     <link rel="stylesheet" href="css/_components.slider.css">
     <link rel="stylesheet" href="css/_components.header.css">
 
-    <link rel="icon" href="/favicon.png">
+    <link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css">
+
+    <link rel="icon" href="Favicon.png">
+
+    <style>
+    @import 'https://fonts.googleapis.com/css?family=Open+Sans';
+    </style>
 
 </head>
-<body ng-app="myApp" class="tk-ingra">
+<body ng-app="myApp" style="font-family: 'Open Sans', sans-serif;">
 
     <div class="c-main" ng-controller="MainController">
 
@@ -63,6 +65,8 @@
     <script src="bower_components/angular-touch/angular-touch.min.js"></script>
     <script src="js/ui-bootstrap.min.js"></script>
     <script src="bower_components/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.js"></script>
+
+    <script src="bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
 
     <script src="app/app.module.js"></script>
     <script src="app/app.route.js"></script>

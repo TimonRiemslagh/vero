@@ -19,20 +19,21 @@
 }
 
 .c-header__title span {
-    font-size: 30px;
+    font-size: 15px;
     color: white;
 }
 
 .c-header__event {
-  position: absolute;
+    width:100%;
+    margin: 60px auto 40px auto;
+  /*position: absolute;
   right: 150px;
   bottom: 40px;
-  width: 350px;
-
+  width: 350px;*/
 }
 
 .c-header__event * {
-    color: white;
+    /*color: white;*/
 }
 
 .c-page-title {
@@ -59,4 +60,3 @@
 .c-main {
     min-height: 700px;
 }
-

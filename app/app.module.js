@@ -42,7 +42,7 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
 
   };
 
-  var counter = 1;
+  var counter = 0;
 
   var handlePhotos = function(d, object) {
     var phs = [];
@@ -51,11 +51,16 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
     });
     object.photos = phs;
 
-    if(counter == data.albums.length) {
-      localStorage.setItem('albums', JSON.stringify(data));
-      $rootScope.$broadcast('updateData');
+
+
+    /*if(counter == data.albums.length) {
+
+
+      console.log(data);
+
+
       //$rootScope.$broadcast('dataLoaded');
-    }
+    }*/
 
     if(object.title == "vcEvents") {
       data.eventAlbum = object;
@@ -68,6 +73,14 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
     else {
       counter++;
     }
+
+    console.log(counter, data.albums.length);
+
+    if(counter == data.albums.length && data.eventAlbum && data.sliderAlbum) {
+      localStorage.setItem('albums', JSON.stringify(data));
+      $rootScope.$broadcast('updateData');
+    }
+
   };
 
   var service = {

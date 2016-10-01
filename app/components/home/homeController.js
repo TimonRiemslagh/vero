@@ -1,7 +1,6 @@
 myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($scope, Albums, $location) {
 
   $scope.data = JSON.parse(localStorage.getItem('albums'));
-  var sliderphotosnumber = 5;
 
   while(!$scope.data) {
     $scope.data = JSON.parse(localStorage.getItem('albums'));
@@ -28,6 +27,8 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
   var handleGrid = function() {
     $scope.albumSubSets = [];
+
+    $scope.albums = $scope.data.albums;
 
     if($scope.data.albums) {
 
@@ -66,7 +67,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
       console.log($scope.sliderAlbum);
 
-      for(var t = 0; t < sliderphotosnumber; t++) {
+      for(var t = 0; t < $scope.sliderAlbum.photos.length; t++) {
           $scope.addSlide($scope.sliderAlbum.photos[t].url);
       }
     }
