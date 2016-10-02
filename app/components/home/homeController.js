@@ -25,7 +25,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
     });
   };
 
-  var handleGrid = function() {
+  /*var handleGrid = function() {
     $scope.albumSubSets = [];
 
     $scope.albums = $scope.data.albums;
@@ -44,7 +44,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
       $scope.albumSubSets.push(finalSubSet);
 
     }
-  };
+  };*/
 
   var loadEvent = function() {
 
@@ -76,7 +76,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
   if($scope.data) {
     loadEvent();
     loadSlider();
-    handleGrid();
+    $scope.albums = $scope.data.albums;
   }
 
   $scope.showAlbum = function(album) {

@@ -1,4 +1,4 @@
-myApp.controller('AlbumController', ['$scope', '$routeParams', 'Lightbox', function($scope, $routeParams, Lightbox) {
+myApp.controller('AlbumController', ['$scope', '$routeParams', function($scope, $routeParams) {
 
   window.scrollTo(0, 0);
 
@@ -10,7 +10,7 @@ myApp.controller('AlbumController', ['$scope', '$routeParams', 'Lightbox', funct
     console.log('update data');
     data = JSON.parse(localStorage.getItem('albums'));
   });
-  
+
   if(data.albums) {
 
     data.albums.forEach(function(album) {
@@ -23,27 +23,13 @@ myApp.controller('AlbumController', ['$scope', '$routeParams', 'Lightbox', funct
     setTimeout(function(){
 
       $('.imageWrapper').magnificPopup({
-        delegate: 'a', // child items selector, by clicking on it popup will open
+        delegate: 'a',
         type: 'image',
         gallery:{enabled:true}
-        // other options
       });
 
-      //console.log($('.imageWrapper').children().length);
-
     }, 1);
-  
-    //console.log($('.imageWrapper'));
-
-    //console.log($scope.photos);
   }
-
-  $scope.openLightboxModal = function (index) {
-    //Lightbox.openModal($scope.photos, index);
-
-
-
-  };
 
   $scope.test = function() {
     console.log('bla');

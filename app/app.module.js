@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','ngAnimate', 'ngTouch', 'ui.bootstrap', 'bootstrapLightbox', 'wu.masonry']);
+var myApp = angular.module('myApp', ['ngRoute','ngAnimate', 'ngTouch', 'ui.bootstrap', 'wu.masonry']);
 
 myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) {
   var data = {
@@ -50,17 +50,6 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
         phs.push({'url': entry.content.src, 'description': entry.summary.$t});
     });
     object.photos = phs;
-
-
-
-    /*if(counter == data.albums.length) {
-
-
-      console.log(data);
-
-
-      //$rootScope.$broadcast('dataLoaded');
-    }*/
 
     if(object.title == "vcEvents") {
       data.eventAlbum = object;
