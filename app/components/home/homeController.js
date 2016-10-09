@@ -2,57 +2,23 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
   $scope.data = JSON.parse(localStorage.getItem('albums'));
 
-  while(!$scope.data) {
-    $scope.data = JSON.parse(localStorage.getItem('albums'));
-  }
-
   $scope.$on('updateData', function() {
     console.log('update data');
     $scope.data = JSON.parse(localStorage.getItem('albums'));
+    $scope.loadEvent();
+    $scope.loadSlider();
+    $scope.albums = $scope.data.albums;
   });
 
   $scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
-  var slides = $scope.slides = [];
-  var currIndex = 0;
 
-  $scope.addSlide = function(url) {
-    slides.push({
-      image: url,
-      text: "",
-      id: currIndex++
-    });
-  };
-
-  /*var handleGrid = function() {
-    $scope.albumSubSets = [];
-
-    $scope.albums = $scope.data.albums;
-
-    if($scope.data.albums) {
-
-      var subsets = Math.floor($scope.data.albums.length/4);
-      var subsetsrest = $scope.data.albums.length % 4;
-
-      for(var t = 0; t < subsets; t++) {
-        var albumSubSet = $scope.data.albums.slice((t*4), (t*4)+4);
-        $scope.albumSubSets.push(albumSubSet);
-      }
-
-      var finalSubSet = $scope.data.albums.slice($scope.data.albums.length - subsetsrest, $scope.data.albums.length);
-      $scope.albumSubSets.push(finalSubSet);
-
-    }
-  };*/
-
-  var loadEvent = function() {
+  $scope.loadEvent = function() {
 
     $scope.eventAlbum = $scope.data.eventAlbum;
 
     if($scope.eventAlbum) {
-
-      console.log($scope.eventAlbum);
 
       $scope.upcomming = {};
       $scope.upcomming.url = $scope.eventAlbum.photos[0].url;
@@ -61,21 +27,24 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
   };
 
-  var loadSlider = function() {
+  $scope.loadSlider = function() {
+    var currIndex = 0;
+    $scope.slides = [];
     $scope.sliderAlbum = $scope.data.sliderAlbum;
     if($scope.sliderAlbum) {
-
-      console.log($scope.sliderAlbum);
-
       for(var t = 0; t < $scope.sliderAlbum.photos.length; t++) {
-          $scope.addSlide($scope.sliderAlbum.photos[t].url);
+        $scope.slides.push({
+          image: $scope.sliderAlbum.photos[t].url,
+          text: "",
+          id: currIndex++
+        });
       }
     }
   };
 
   if($scope.data) {
-    loadEvent();
-    loadSlider();
+    $scope.loadEvent();
+    $scope.loadSlider();
     $scope.albums = $scope.data.albums;
   }
 

@@ -31,8 +31,4 @@ myApp.controller('AlbumController', ['$scope', '$routeParams', function($scope, 
     }, 1);
   }
 
-  $scope.test = function() {
-    console.log('bla');
-  }
-
 }]);

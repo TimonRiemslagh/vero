@@ -63,8 +63,6 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
       counter++;
     }
 
-    console.log(counter, data.albums.length);
-
     if(counter == data.albums.length && data.eventAlbum && data.sliderAlbum) {
       localStorage.setItem('albums', JSON.stringify(data));
       $rootScope.$broadcast('updateData');
