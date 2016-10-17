@@ -10,7 +10,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
     $scope.albums = $scope.data.albums;
   });
 
-  $scope.myInterval = 1000;
+  $scope.myInterval = 2000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
 
