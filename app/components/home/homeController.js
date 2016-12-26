@@ -10,7 +10,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
     $scope.albums = $scope.data.albums;
   });
 
-  $scope.myInterval = 2000;
+  $scope.myInterval = 5000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
 
@@ -23,7 +23,6 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
       $scope.upcomming = {};
       $scope.upcomming.url = $scope.eventAlbum.photos[0].url;
       $scope.upcomming.desc = JSON.parse($scope.eventAlbum.photos[0].description);
-
     }
 
   };
