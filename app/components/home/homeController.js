@@ -2,6 +2,8 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
   $scope.data = JSON.parse(localStorage.getItem('albums'));
 
+  console.log($(window).width());
+
   $scope.$on('updateData', function() {
     console.log('update data');
     $scope.data = JSON.parse(localStorage.getItem('albums'));
@@ -10,7 +12,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
     $scope.albums = $scope.data.albums;
   });
 
-  $scope.myInterval = 5000;
+  $scope.myInterval = 2000;
   $scope.noWrapSlides = false;
   $scope.active = 0;
 
@@ -23,6 +25,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
       $scope.upcomming = {};
       $scope.upcomming.url = $scope.eventAlbum.photos[0].url;
       $scope.upcomming.desc = JSON.parse($scope.eventAlbum.photos[0].description);
+
     }
 
   };
@@ -46,6 +49,7 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
     $scope.loadEvent();
     $scope.loadSlider();
     $scope.albums = $scope.data.albums;
+
   }
 
   $scope.showAlbum = function(album) {

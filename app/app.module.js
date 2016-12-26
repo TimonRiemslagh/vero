@@ -64,6 +64,13 @@ myApp.service( 'Albums', [ '$http', '$rootScope', function( $http, $rootScope ) 
     }
 
     if(counter == data.albums.length && data.eventAlbum && data.sliderAlbum) {
+
+      for(var t = 0; t < data.albums.length; t++) {
+        var sub = data.albums[t].title.split('--');
+        data.albums[t].elementTitle = sub[1];
+        data.albums[t].elementDesc = sub[2];
+      }
+
       localStorage.setItem('albums', JSON.stringify(data));
       $rootScope.$broadcast('updateData');
     }

@@ -1,12 +1,5 @@
 .c-albums {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-.c-album {
-
-  margin-bottom: 2rem;
-
+  margin-top: 100px;
 }
 
 .c-album:hover {
@@ -24,8 +17,9 @@
 
 .c-album__image {
   overflow: hidden;
-  max-height: 196px;
+  max-height: 270px;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 .breadcrumb {
@@ -60,4 +54,35 @@
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+.c-second-row {
+  margin-top: 60px;
+}
+
+.c-overlay {
+  position: absolute;
+  top:0;
+  left:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+  background: transparent; /* For browsers that do not support gradients */
+    background: linear-gradient(to bottom,transparent,rgba(0,0,0,0.74));
+    background: -webkit-linear-gradient(to bottom,transparent,rgba(0,0,0,0.74));
+    background: -o-linear-gradient(to bottom,transparent,rgba(0,0,0,0.74));
+    background: -moz-linear-gradient(to bottom,transparent,rgba(0,0,0,0.74));
+
+
+
+}
+
+.c-overlay-text {
+  position: absolute;
+  left:20px;
+  bottom:30px;
+    color: white;
+    z-index: 3;
+    margin-right:20px;
 }

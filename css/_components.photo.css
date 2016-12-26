@@ -42,11 +42,11 @@
 
 @media only screen and (min-width: 900px) {
     .masonry-brick {
-        width:25% !important;
+        width:33% !important;
 
     }
     .c-slider__slides {
-        height: 600px !important;
+        height: 500px !important;
     }
 
     .c-header__title span {

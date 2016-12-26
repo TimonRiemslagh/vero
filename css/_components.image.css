@@ -1,0 +1,30 @@
+.c-image {
+    width:33%;
+}
+
+.c-image--left {
+    float: left;
+}
+
+.c-image--right {
+    float: right;
+}
+
+.c-row-content {
+    margin-top: 5%;
+    width:40%;
+}
+
+.c-row-content--right {
+    float: right;
+    margin-right:10%;
+}
+
+.c-row-content--left {
+    float: left;
+    margin-left:5%;
+}
+
+.c-row {
+    margin-top:150px;
+}

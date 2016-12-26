@@ -16,7 +16,7 @@ myApp.controller('AlbumController', ['$scope', '$routeParams', function($scope, 
     data.albums.forEach(function(album) {
       if(album.title == albumTitle) {
         $scope.photos = album.photos;
-        $scope.title = album.summary.title;
+        $scope.title = album.elementTitle;
       }
     });
 

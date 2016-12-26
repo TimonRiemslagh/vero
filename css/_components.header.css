@@ -25,15 +25,6 @@
 
 .c-header__event {
     width:100%;
-    margin: 60px auto 40px auto;
-  /*position: absolute;
-  right: 150px;
-  bottom: 40px;
-  width: 350px;*/
-}
-
-.c-header__event * {
-    /*color: white;*/
 }
 
 .c-page-title {
@@ -45,6 +36,7 @@
     background-color: rgb(10, 117, 170);
     color: white;
     padding: 20px 0;
+    margin-top: 100px;
 }
 
 .c-footer-list {
@@ -60,3 +52,26 @@
 .c-main {
     min-height: 700px;
 }
+
+.c-event-link, .c-event-link:link, .c-event-link:visited, .c-event-link:active {
+    color: black;
+}
+
+.c-event-link:hover {
+    color: #0A75AA;
+    text-decoration: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
