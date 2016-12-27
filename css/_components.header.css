@@ -1,3 +1,7 @@
+h1 {
+    color: rgb(10, 117, 170);
+}
+
 .c-header {
   position: relative;
 }
@@ -54,12 +58,13 @@
 }
 
 .c-event-link, .c-event-link:link, .c-event-link:visited, .c-event-link:active {
-    color: black;
+    color: #0A75AA;
+    text-decoration: underline;
 }
 
 .c-event-link:hover {
     color: #0A75AA;
-    text-decoration: none;
+    text-decoration: underline;
 }
 
 .clearfix:after {

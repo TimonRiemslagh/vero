@@ -2,8 +2,6 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
 
   $scope.data = JSON.parse(localStorage.getItem('albums'));
 
-  console.log($(window).width());
-
   $scope.$on('updateData', function() {
     console.log('update data');
     $scope.data = JSON.parse(localStorage.getItem('albums'));
@@ -55,5 +53,12 @@ myApp.controller('HomeController', ['$scope', 'Albums', '$location',  function($
   $scope.showAlbum = function(album) {
     $location.path('/album/' + album);
   };
+
+  setTimeout(function(){
+    $('.js-vero-info').magnificPopup({
+      type:'inline',
+      midClick: true
+    });
+  });
 
 }]);

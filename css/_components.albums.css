@@ -18,7 +18,6 @@
 .c-album__image {
   overflow: hidden;
   max-height: 270px;
-  margin-bottom: 1rem;
   position: relative;
 }
 
